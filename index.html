@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CNY Noble LLC | Smart Vending Services</title>
+
+<style>
+    :root {
+        --navy: #0d1b2a;
+        --green: #1b5e20;
+        --gold: #ffcc00;
+        --light: #f7f7f7;
+        --white: #ffffff;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: var(--light);
+        color: var(--navy);
+    }
+
+    header {
+        background: var(--navy);
+        color: var(--white);
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    header img {
+        width: 180px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 42px;
+        letter-spacing: 1px;
+        color: var(--gold);
+    }
+
+    header p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    nav {
+        background: var(--green);
+        padding: 12px;
+        text-align: center;
+    }
+
+    nav a {
+        color: var(--white);
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 50px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: var(--green);
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .card {
+        background: var(--white);
+        padding: 20px;
+        border-radius: 10px;
+        width: 280px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-top: 5px solid var(--green);
+    }
+
+    .card h3 {
+        margin-top: 0;
+        color: var(--navy);
+    }
+
+    .cta {
+        background: var(--navy);
+        color: var(--white);
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .cta a {
+        background: var(--gold);
+        padding: 12px 25px;
+        border-radius: 5px;
+        color: var(--navy);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    footer {
+        background: var(--green);
+        color: var(--white);
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    /* FORM STYLING */
+    form {
+        background: var(--white);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        max-width: 600px;
+        margin: auto;
+        border-left: 6px solid var(--green);
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: var(--navy);
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 20px;
+        background: var(--green);
+        color: var(--white);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background: #144d18;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="CNY Noble LLC Logo">
+    <h1>CNY Noble LLC</h1>
+    <p>Local Service. Noble Standards. Real Results.</p>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#why">Why Smart Machines</a>
+    <a href="#request">Request a Machine</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="services">
+    <h2>Our Vending Services</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        We provide modern, AI-powered, fully stocked vending machines for businesses, offices, warehouses,
+        apartments, hotels, and more — at <strong>no cost to you</strong>. We install, restock, maintain, and manage everything.
+    </p>
+
+    <div class="flex">
+        <div class="card">
+            <h3>No Cost to You</h3>
+            <p>Machines are placed at your location with zero cost or obligation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Zero Hassle</h3>
+            <p>We handle installation, stocking, restocking, service, and maintenance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Reliable & Professional</h3>
+            <p>Clean, stocked, and attractive machines that reflect your business.</p>
+        </div>
+
+        <div class="card">
+            <h3>Customized Solutions</h3>
+            <p>Product selections tailored to your location and customer preferences.</p>
+        </div>
+
+        <div class="card">
+            <h3>60-Day Risk-Free Trial</h3>
+            <p>If you're not satisfied, we remove the machine immediately — no obligations.</p>
+        </div>
+    </div>
+</section>
+
+<section id="why">
+    <h2>Why Smart AI Vending Machines</h2>
+
+    <div class="flex">
+        <div class="card">
+            <h3>15,000+ SKUs</h3>
+            <p>Drinks, snacks, frozen meals, sandwiches, toiletries, and more.</p>
+        </div>
+
+        <div class="card">
+            <h3>Easy Checkout</h3>
+            <p>Tap, grab multiple items, pay any way (card, Apple Pay), auto checkout in 60 seconds.</p>
+        </div>
+
+        <div class="card">
+            <h3>Modern Design</h3>
+            <p>Slot-free, zero moving parts, lower failure rate, easy maintenance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Smart Management</h3>
+            <p>Real-time alerts, remote monitoring, and AI-powered restocking insights.</p>
+        </div>
+    </div>
+</section>
+
+<section id="request">
+    <h2>Request a Machine</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        Fill out the form below and we will contact you within 24 hours.
+    </p>
+
+    <form action="https://formspree.io/f/mwkagjqd" method="POST">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" required>
+
+        <label>Business / Location Name</label>
+        <input type="text" name="business" required>
+
+        <label>Location Address</label>
+        <input type="text" name="address" required>
+
+        <label>Message</label>
+        <textarea name="message" rows="5"></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</section>
+
+<section class="cta" id="contact">
+    <h2>Contact Us</h2>
+    <p>It's quick, easy, and completely free to place a machine at your location.</p>
+    <br>
+    <a href="mailto:CNYNOBLE.LLC@OUTLOOK.COM">Email Us</a>
+    <p style="margin-top:20px;">Phone: (315) 308-0502</p>
+</section>
+
+<footer>
+    © 2026 CNY Noble LLC — Smart Vending Services
+</footer>
+
+</body>
+</html>
