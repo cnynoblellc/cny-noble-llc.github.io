@@ -21,6 +21,7 @@
         color: var(--navy);
     }
 
+    /* HEADER */
     header {
         background: var(--navy);
         color: var(--white);
@@ -46,6 +47,7 @@
         margin-top: 10px;
     }
 
+    /* NAVIGATION */
     nav {
         background: var(--green);
         padding: 12px;
@@ -60,10 +62,15 @@
         font-weight: bold;
     }
 
+    /* SECTION BLOCKS */
     section {
-        padding: 50px 20px;
-        max-width: 1000px;
+        padding: 60px 20px;
+        max-width: 1100px;
         margin: auto;
+        background: var(--white);
+        margin-top: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
 
     h2 {
@@ -73,6 +80,13 @@
         color: var(--green);
     }
 
+    .section-img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 25px;
+    }
+
+    /* FLEX CARDS */
     .flex {
         display: flex;
         flex-wrap: wrap;
@@ -94,33 +108,7 @@
         color: var(--navy);
     }
 
-    .cta {
-        background: var(--navy);
-        color: var(--white);
-        padding: 40px 20px;
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .cta a {
-        background: var(--gold);
-        padding: 12px 25px;
-        border-radius: 5px;
-        color: var(--navy);
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 18px;
-    }
-
-    footer {
-        background: var(--green);
-        color: var(--white);
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-    }
-
-    /* FORM STYLING */
+    /* FORM */
     form {
         background: var(--white);
         padding: 25px;
@@ -162,6 +150,38 @@
     button:hover {
         background: #144d18;
     }
+
+    /* CONTACT BACKGROUND */
+    #contact {
+        background-image: url('contact-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    }
+
+    #contact h2 {
+        color: var(--gold);
+    }
+
+    #contact a {
+        background: var(--gold);
+        padding: 12px 25px;
+        border-radius: 5px;
+        color: var(--navy);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    footer {
+        background: var(--green);
+        color: var(--white);
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
 </style>
 </head>
 
@@ -180,7 +200,10 @@
     <a href="#contact">Contact</a>
 </nav>
 
+<!-- SERVICES BLOCK -->
 <section id="services">
+    <img src="services.jpg" class="section-img" alt="Services Image">
+
     <h2>Our Vending Services</h2>
     <p style="text-align:center; max-width:800px; margin:auto;">
         We provide modern, AI-powered, fully stocked vending machines for businesses, offices, warehouses,
@@ -215,7 +238,10 @@
     </div>
 </section>
 
+<!-- WHY SMART MACHINES BLOCK -->
 <section id="why">
+    <img src="smart.jpg" class="section-img" alt="Smart Machine Image">
+
     <h2>Why Smart AI Vending Machines</h2>
 
     <div class="flex">
@@ -241,6 +267,7 @@
     </div>
 </section>
 
+<!-- REQUEST FORM BLOCK -->
 <section id="request">
     <h2>Request a Machine</h2>
     <p style="text-align:center; max-width:800px; margin:auto;">
@@ -270,12 +297,17 @@
     </form>
 </section>
 
-<section class="cta" id="contact">
+<!-- CONTACT BLOCK WITH BACKGROUND -->
+<section id="contact">
     <h2>Contact Us</h2>
-    <p>It's quick, easy, and completely free to place a machine at your location.</p>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        It's quick, easy, and completely free to place a machine at your location.
+    </p>
     <br>
-    <a href="mailto:CNYNOBLE.LLC@OUTLOOK.COM">Email Us</a>
-    <p style="margin-top:20px;">Phone: (315) 308-0502</p>
+    <div style="text-align:center;">
+        <a href="mailto:CNYNOBLE.LLC@OUTLOOK.COM">Email Us</a>
+        <p style="margin-top:20px; font-size:20px;">Phone: (315) 308-0502</p>
+    </div>
 </section>
 
 <footer>
