@@ -25,26 +25,32 @@
     header {
         background: var(--navy);
         color: var(--white);
-        padding: 40px 20px;
-        text-align: center;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
     }
 
     header img {
-        width: 180px;
+        width: 140px;
         height: auto;
-        margin-bottom: 20px;
+    }
+
+    header .title-block {
+        display: flex;
+        flex-direction: column;
     }
 
     header h1 {
         margin: 0;
-        font-size: 42px;
-        letter-spacing: 1px;
+        font-size: 38px;
         color: var(--gold);
     }
 
     header p {
+        margin: 5px 0 0 0;
         font-size: 18px;
-        margin-top: 10px;
     }
 
     /* NAVIGATION */
@@ -76,14 +82,30 @@
     h2 {
         font-size: 32px;
         margin-bottom: 20px;
-        text-align: center;
         color: var(--green);
     }
 
-    .section-img {
+    /* SERVICES LAYOUT */
+    .services-flex {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .services-text {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .services-img {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .services-img img {
         width: 100%;
         border-radius: 12px;
-        margin-bottom: 25px;
     }
 
     /* FLEX CARDS */
@@ -151,18 +173,27 @@
         background: #144d18;
     }
 
-    /* CONTACT BACKGROUND */
+    /* CONTACT BACKGROUND FIX + TALLER + LEFT TEXT */
     #contact {
-        background-image: url('contact-bg.jpg');
-        background-size: cover;
-        background-position: center;
+        background: url('contact-bg.jpg') center/cover no-repeat;
         color: var(--white);
         border-radius: 12px;
         box-shadow: 0 0 12px rgba(0,0,0,0.3);
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
     }
 
     #contact h2 {
         color: var(--gold);
+        text-align: left;
+    }
+
+    #contact p {
+        text-align: left;
+        max-width: 500px;
     }
 
     #contact a {
@@ -173,6 +204,8 @@
         font-weight: bold;
         text-decoration: none;
         font-size: 18px;
+        display: inline-block;
+        margin-top: 20px;
     }
 
     footer {
@@ -189,8 +222,10 @@
 
 <header>
     <img src="logo.png" alt="CNY Noble LLC Logo">
-    <h1>CNY Noble LLC</h1>
-    <p>Local Service. Noble Standards. Real Results.</p>
+    <div class="title-block">
+        <h1>CNY Noble LLC</h1>
+        <p>Local Service. Noble Standards. Real Results.</p>
+    </div>
 </header>
 
 <nav>
@@ -202,38 +237,25 @@
 
 <!-- SERVICES BLOCK -->
 <section id="services">
-    <img src="services.jpg" class="section-img" alt="Services Image">
+    <div class="services-flex">
+        <div class="services-text">
+            <h2>Our Vending Services</h2>
+            <p>
+                We provide modern, AI-powered, fully stocked vending machines for businesses, offices, warehouses,
+                apartments, hotels, and more — at <strong>no cost to you</strong>. We install, restock, maintain, and manage everything.
+            </p>
 
-    <h2>Our Vending Services</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-        We provide modern, AI-powered, fully stocked vending machines for businesses, offices, warehouses,
-        apartments, hotels, and more — at <strong>no cost to you</strong>. We install, restock, maintain, and manage everything.
-    </p>
-
-    <div class="flex">
-        <div class="card">
-            <h3>No Cost to You</h3>
-            <p>Machines are placed at your location with zero cost or obligation.</p>
+            <div class="flex">
+                <div class="card"><h3>No Cost to You</h3><p>Machines placed at your location with zero cost.</p></div>
+                <div class="card"><h3>Zero Hassle</h3><p>We handle installation, stocking, and maintenance.</p></div>
+                <div class="card"><h3>Reliable & Professional</h3><p>Clean, stocked, attractive machines.</p></div>
+                <div class="card"><h3>Customized Solutions</h3><p>Products tailored to your location.</p></div>
+                <div class="card"><h3>60-Day Trial</h3><p>Not satisfied? We remove it immediately.</p></div>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Zero Hassle</h3>
-            <p>We handle installation, stocking, restocking, service, and maintenance.</p>
-        </div>
-
-        <div class="card">
-            <h3>Reliable & Professional</h3>
-            <p>Clean, stocked, and attractive machines that reflect your business.</p>
-        </div>
-
-        <div class="card">
-            <h3>Customized Solutions</h3>
-            <p>Product selections tailored to your location and customer preferences.</p>
-        </div>
-
-        <div class="card">
-            <h3>60-Day Risk-Free Trial</h3>
-            <p>If you're not satisfied, we remove the machine immediately — no obligations.</p>
+        <div class="services-img">
+            <img src="services.jpg" alt="Services Image">
         </div>
     </div>
 </section>
@@ -245,25 +267,10 @@
     <h2>Why Smart AI Vending Machines</h2>
 
     <div class="flex">
-        <div class="card">
-            <h3>15,000+ SKUs</h3>
-            <p>Drinks, snacks, frozen meals, sandwiches, toiletries, and more.</p>
-        </div>
-
-        <div class="card">
-            <h3>Easy Checkout</h3>
-            <p>Tap, grab multiple items, pay any way (card, Apple Pay), auto checkout in 60 seconds.</p>
-        </div>
-
-        <div class="card">
-            <h3>Modern Design</h3>
-            <p>Slot-free, zero moving parts, lower failure rate, easy maintenance.</p>
-        </div>
-
-        <div class="card">
-            <h3>Smart Management</h3>
-            <p>Real-time alerts, remote monitoring, and AI-powered restocking insights.</p>
-        </div>
+        <div class="card"><h3>15,000+ SKUs</h3><p>Drinks, snacks, frozen meals, and more.</p></div>
+        <div class="card"><h3>Easy Checkout</h3><p>Tap, grab, pay — 60‑second checkout.</p></div>
+        <div class="card"><h3>Modern Design</h3><p>Slot‑free, low‑maintenance, reliable.</p></div>
+        <div class="card"><h3>Smart Management</h3><p>Real‑time alerts and remote control.</p></div>
     </div>
 </section>
 
@@ -297,17 +304,13 @@
     </form>
 </section>
 
-<!-- CONTACT BLOCK WITH BACKGROUND -->
+<!-- CONTACT BLOCK -->
 <section id="contact">
     <h2>Contact Us</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-        It's quick, easy, and completely free to place a machine at your location.
-    </p>
-    <br>
-    <div style="text-align:center;">
-        <a href="mailto:CNYNOBLE.LLC@OUTLOOK.COM">Email Us</a>
-        <p style="margin-top:20px; font-size:20px;">Phone: (315) 308-0502</p>
-    </div>
+    <p>It's quick, easy, and completely free to place a machine at your location.</p>
+
+    <a href="mailto:CNYNOBLE.LLC@OUTLOOK.COM">Email Us</a>
+    <p style="font-size:20px;">Phone: (315) 308-0502</p>
 </section>
 
 <footer>
