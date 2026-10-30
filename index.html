@@ -28,7 +28,6 @@
         padding: 20px 40px;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
         gap: 20px;
     }
 
@@ -173,7 +172,20 @@
         background: #144d18;
     }
 
-    /* CONTACT SECTION — FIXED */
+    /* SHOWCASE SECTION */
+    #showcase {
+        text-align: center;
+        padding: 40px;
+    }
+
+    #showcase img {
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    /* CONTACT SECTION */
     #contact {
         background: url('contact-bg.jpg') center/cover no-repeat;
         color: #000000;
@@ -216,6 +228,20 @@
         margin-top: 25px;
     }
 
+    /* SOCIAL ICONS */
+    .social-icons {
+        margin-top: 30px;
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .social-icons img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
     footer {
         background: var(--green);
         color: var(--white);
@@ -239,6 +265,7 @@
 <nav>
     <a href="#services">Services</a>
     <a href="#why">Why Smart Machines</a>
+    <a href="#showcase">Showcase</a>
     <a href="#request">Request a Machine</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -293,6 +320,12 @@
     </div>
 </section>
 
+<!-- SHOWCASE SECTION -->
+<section id="showcase">
+    <h2>Showcase</h2>
+    <img src="showcase.jpg" alt="Showcase Image">
+</section>
+
 <!-- REQUEST FORM BLOCK -->
 <section id="request">
     <h2>Request a Machine</h2>
@@ -329,7 +362,18 @@
     <p>It's quick, easy, and completely free to place a machine at your location.</p>
 
     <a href="mailto:CNYNOBLE.LLC@OUTLOOK.COM">Email Us</a>
-    <p style="font-size:48px; font-weight:800;">Phone: (315) 308-0502</p>
+    <p style="font-size:28px; font-weight:700;">Phone: (315) 308-0502</p>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61591967769438" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/cny_noble_llc" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+    </div>
 </section>
 
 <footer>
