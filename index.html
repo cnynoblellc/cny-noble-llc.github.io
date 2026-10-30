@@ -185,12 +185,34 @@
         box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
 
-    /* CONTACT SECTION */
+    /* CONTACT SECTION — DARK OVERLAY */
     #contact {
+        position: relative;
         background: url('contact-bg.jpg') center/cover no-repeat;
-        color: #000000;
+        color: #ffffff;
         border-radius: 12px;
-        box-shadow: 0 0 12px rgba(0,0,0,0.3);
         min-height: 600px;
-        display: flex;
-        flex-direction
+        padding: 50px;
+    }
+
+    #contact::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.55);
+        border-radius: 12px;
+    }
+
+    #contact * {
+        position: relative;
+    }
+
+    #contact h2 {
+        font-size: 48px;
+        font-weight: 800;
+        color: #ffffff;
+    }
+
+    #contact p {
+        font-size: 28px;
+        font-weight: 700;
