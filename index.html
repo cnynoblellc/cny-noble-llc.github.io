@@ -179,11 +179,37 @@
     }
 
     #showcase img {
-        width: 100%;
-        max-width: 1000px;
+        width: 300px; /* SMALLER SIZE */
         border-radius: 12px;
         box-shadow: 0 0 12px rgba(0,0,0,0.2);
-        margin-bottom: 30px;
+        margin: 15px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    #showcase img:hover {
+        transform: scale(1.05);
+    }
+
+    /* FULLSCREEN MODAL */
+    #modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+    }
+
+    #modal.close-area {
+        cursor: pointer;
     }
 
     /* CONTACT SECTION — DARK OVERLAY */
@@ -252,6 +278,18 @@
         margin-top: 40px;
     }
 </style>
+
+<script>
+function openModal(src) {
+    document.getElementById("modal-img").src = src;
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
 </head>
 
 <body>
@@ -326,12 +364,14 @@
 <section id="showcase">
     <h2>Showcase</h2>
 
-    <!-- FIRST SHOWCASE IMAGE -->
-    <img src="showcase.jpg" alt="Showcase Image">
-
-    <!-- SECOND SHOWCASE IMAGE -->
-    <img src="showcase2.jpg" alt="Second Showcase Image">
+    <img src="showcase.jpg" onclick="openModal('showcase.jpg')" alt="Showcase Image">
+    <img src="showcase2.jpg" onclick="openModal('showcase2.jpg')" alt="Second Showcase Image">
 </section>
+
+<!-- FULLSCREEN MODAL -->
+<div id="modal" onclick="closeModal()">
+    <img id="modal-img" src="">
+</div>
 
 <!-- REQUEST FORM BLOCK -->
 <section id="request">
