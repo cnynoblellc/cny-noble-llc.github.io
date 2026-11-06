@@ -179,7 +179,7 @@
     }
 
     #showcase img {
-        width: 150px; /* SMALLER THUMBNAILS */
+        width: 150px;
         border-radius: 12px;
         box-shadow: 0 0 12px rgba(0,0,0,0.2);
         margin: 15px;
@@ -284,6 +284,26 @@ function openModal(src) {
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
+
+function sendEmail() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const business = document.getElementById("business").value;
+    const address = document.getElementById("address").value;
+    const message = document.getElementById("message").value;
+
+    const body =
+        `Name: ${name}%0D%0A` +
+        `Email: ${email}%0D%0A` +
+        `Phone: ${phone}%0D%0A` +
+        `Business: ${business}%0D%0A` +
+        `Address: ${address}%0D%0A` +
+        `Message: ${message}`;
+
+    window.location.href =
+        `mailto:cnynoble.llc@outlook.com?subject=New%20Location%20Request&body=${body}`;
+}
 </script>
 
 </head>
@@ -328,7 +348,6 @@ function closeModal() {
         <div class="services-img">
             <img src="services.jpg" alt="Services Image">
 
-            <!-- MEDIUM YOUTUBE VIDEO UNDER IMAGE -->
             <div style="margin-top:20px; text-align:right;">
                 <iframe width="480" height="270"
                     src="https://www.youtube.com/embed/h1su0bKTQeE"
@@ -376,26 +395,26 @@ function closeModal() {
         Fill out the form below and we will contact you within 24 hours.
     </p>
 
-    <form action="https://formspree.io/f/mwkagjqd" method="POST">
+    <form onsubmit="sendEmail(); return false;">
         <label>Your Name</label>
-        <input type="text" name="name" required>
+        <input id="name" type="text" required>
 
         <label>Email Address</label>
-        <input type="email" name="email" required>
+        <input id="email" type="email" required>
 
         <label>Phone Number</label>
-        <input type="text" name="phone" required>
+        <input id="phone" type="text" required>
 
         <label>Business / Location Name</label>
-        <input type="text" name="business" required>
+        <input id="business" type="text" required>
 
         <label>Location Address</label>
-        <input type="text" name="address" required>
+        <input id="address" type="text" required>
 
         <label>Message</label>
-        <textarea name="message" rows="5"></textarea>
+        <textarea id="message" rows="5"></textarea>
 
-        <button type="submit">Submit Request</button>
+        <button type="submit">Submit Location Request</button>
     </form>
 </section>
 
